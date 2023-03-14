@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 class MessagesList extends PureComponent {
   render() {
-    const {messagesList} = this.props;
+    const { messagesList } = this.props;
     return (
       <div className="messages-list">
         {messagesList.map(message => <Message message={message} key={message.created_at} />) }
