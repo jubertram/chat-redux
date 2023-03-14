@@ -2,6 +2,28 @@ body {
   font-family: Helvetica;
 }
 .app {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: flex ;
+}
+
+.channels-list {
+  height: 100vh;
+  background-color: blue;
+  width: 30%;
+}
+
+.selected-channel {
+  height: 100vh;
+  background-color: red;
+  width: 70%;
+}
+
+.selected-channel h1{
+  height: 10%;
+}
+
+.messages-list {
+  margin: 5px;
+  background-color: yellow;
+  width: auto;
+  height: 85%;
 }
