@@ -1,8 +1,14 @@
 import React, { PureComponent } from 'react';
 import Message from '../components/message';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import fetchMessages from '../actions/index';
 
 class MessagesList extends PureComponent {
+  componentWillMount() {
+    this.props.fetchMessages();
+  }
+
   render() {
     const { messagesList } = this.props;
     return (
@@ -13,10 +19,17 @@ class MessagesList extends PureComponent {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { fetchMessages },
+    dispatch
+  );
+}
+
 function mapStateToProps(state) {
   return {
     messagesList: state.messagesList
   };
 }
 
-export default connect(mapStateToProps, null)(MessagesList);
+export default connect(mapStateToProps, mapDispatchToProps)(MessagesList);

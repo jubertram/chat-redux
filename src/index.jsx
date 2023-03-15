@@ -18,7 +18,7 @@ import '../assets/stylesheets/application.scss';
 
 // State and reducers
 export const initialState = {
-  channels: ['#general', '#react', '#montreal'],
+  channels: ['general', 'react', 'montreal'],
   messages: [
     {
       author: "anonymous92",
