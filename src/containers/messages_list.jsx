@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import Message from '../components/message';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import fetchMessages from '../actions/index';
+import { fetchMessages } from '../actions/index';
+import Message from '../components/message';
 
 class MessagesList extends PureComponent {
   componentWillMount() {

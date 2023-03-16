@@ -10,7 +10,7 @@ import reduxPromise from 'redux-promise';
 import channelsListReducer from './reducers/channels_list_reducer';
 import messagesListReducer from './reducers/messages_list_reducer';
 import selectedChannelReducer from './reducers/selected_channel_reducer';
-import currentUsernameReducer from './reducers/current_username_reducer';
+import currentUserReducer from './reducers/current_user_reducer';
 
 // internal modules
 import App from './components/app';
@@ -32,15 +32,15 @@ export const initialState = {
     }
 
   ],
-  selectedChannel: null,
-  currentUsername: prompt("Please enter your Username", "Chosuke")
+  selectedChannel: 'general',
+  currentUser: prompt("What is your username?") || `anonymous${Math.floor(10 + (Math.random() * 90))}`
 };
 
 const reducers = combineReducers({
   channelsList: channelsListReducer,
   messagesList: messagesListReducer,
   selectedChannel: selectedChannelReducer,
-  currentUsername: currentUsernameReducer
+  currentUser: currentUserReducer
 });
 
 const middlewares = applyMiddleware(reduxPromise);
