@@ -25,5 +25,18 @@ body {
   margin: 5px;
   background-color: yellow;
   width: auto;
-  // height: 85%;
+  overflow: scroll;
+  height: 85%;
+}
+
+.message-form {
+  margin: 20px 10px 0;
+
+}
+
+.message-form input {
+  width: 80%;
+}
+.message-form button {
+  width: 20%;
 }
