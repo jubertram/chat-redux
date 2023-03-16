@@ -1,5 +1,6 @@
 body {
   font-family: Helvetica;
+  color: #FCFCFC;
 }
 .app {
   display: flex ;
@@ -7,23 +8,24 @@ body {
 
 .channels-list {
   height: 100vh;
-  background-color: blue;
+  background-color: #5D737E;
   width: 30%;
+  color: #FCFCFC;
+}
+
+.channels-list ul{
+  list-style: none;
 }
 
 .selected-channel {
   height: 100vh;
-  background-color: red;
+  background-color: #02111B;
   width: 70%;
-}
-
-.selected-channel h1{
-  // height: 10%;
 }
 
 .messages-list {
   margin: 5px;
-  background-color: yellow;
+  background-color: #30292F;
   width: auto;
   overflow: scroll;
   height: 85%;
@@ -36,7 +38,13 @@ body {
 
 .message-form input {
   width: 80%;
+  color: #30292F;
 }
 .message-form button {
   width: 20%;
+  background-color: #4D8B31;
+}
+
+.selected-channel-list {
+  font-weight: 700;
 }

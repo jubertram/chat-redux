@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createMessage } from '../actions/index';
 
+
 class MessageForm extends PureComponent {
   constructor(props) {
     super(props);
@@ -15,7 +16,7 @@ class MessageForm extends PureComponent {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.createMessage('general', this.props.currentUser, this.state.message);
+    this.props.createMessage(this.props.selectedChannel, this.props.currentUser, this.state.message);
     this.setState({ message: '' });
   }
   render() {
@@ -37,7 +38,8 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    currentUser: state.currentUser
+    currentUser: state.currentUser,
+    selectedChannel: state.selectedChannel
   };
 }
 

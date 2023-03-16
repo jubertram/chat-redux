@@ -3,10 +3,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchMessages } from '../actions/index';
 import Message from '../components/message';
-import SelectedChannel from './selected_channel.jsx';
 
 class MessagesList extends PureComponent {
   componentWillMount() {
+    console.log('loading');
     this.fetchMessages();
   }
 
