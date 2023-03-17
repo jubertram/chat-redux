@@ -6,7 +6,6 @@ import Message from '../components/message';
 
 class MessagesList extends PureComponent {
   componentWillMount() {
-    console.log('loading');
     this.fetchMessages();
   }
 
@@ -30,7 +29,7 @@ class MessagesList extends PureComponent {
     const { messagesList } = this.props;
     return (
       <div className="messages-list" ref={(list) => { this.list = list; }}>
-        { messagesList.map(message => <Message message={message} key={message.created_at} />) }
+        { messagesList.map(message => <Message message={message} key={message.created_at}/>) }
       </div>
     );
   }
@@ -46,7 +45,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     messagesList: state.messagesList,
-    selectedChannel: state.selectedChannel
+    selectedChannel: state.selectedChannel,
   };
 }
 

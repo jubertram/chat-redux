@@ -7,7 +7,7 @@ class SelectedChannel extends PureComponent {
   render() {
     return (
       <div className="selected-channel">
-        <h2>Channel {this.props.selectedChannel}</h2>
+        <h2>Channel #{this.props.selectedChannel}</h2>
         <MessagesList />
         <MessageForm />
       </div>

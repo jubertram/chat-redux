@@ -24,27 +24,64 @@ body {
 }
 
 .messages-list {
+  color:#02111B;
   margin: 5px;
-  background-color: #30292F;
+  background-color: #FCFCFC;
   width: auto;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
   height: 85%;
 }
 
 .message-form {
   margin: 20px 10px 0;
-
 }
 
 .message-form input {
   width: 80%;
   color: #30292F;
+  padding: 11px 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
 }
-.message-form button {
-  width: 20%;
-  background-color: #4D8B31;
-}
+// .message-form button {
+//   width: 20%;
+//   background-color: #4D8B31;
+// }
 
 .selected-channel-list {
   font-weight: 700;
+}
+
+.channel {
+  font-size: 20px;
+}
+
+.channel:hover{
+  color: #C6CAED;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  width:20%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+button:active {
+  background-color: #2e6b2e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
