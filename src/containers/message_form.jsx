@@ -23,7 +23,7 @@ class MessageForm extends PureComponent {
     return (
       <form className="message-form" onSubmit={this.handleSubmit}>
         <input type="text" onChange={this.handleChange} value={this.state.message} />
-        <button type="submit">Send</button>
+        <button type="submit">SEND</button>
       </form>
     );
   }

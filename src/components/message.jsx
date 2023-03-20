@@ -15,10 +15,12 @@ function stringToColor(str) {
 class Message extends PureComponent {
   render() {
     const { author, created_at, content } = this.props.message;
+    const createdAt = this.props.message.created_at.slice(11, 16);
     return (
       <div className="message">
-        <h4><span style={{ color: stringToColor(author) }}>{author}</span> - { created_at }</h4>
-        <p>{content}</p>
+        <h3><span style={{ color: stringToColor(author) }}>{author}</span></h3>
+        <div className="content">{content}</div>
+        <p>{ createdAt }</p>
       </div>
     );
   }
