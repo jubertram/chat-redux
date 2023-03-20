@@ -7,7 +7,7 @@ import { createMessage } from '../actions/index';
 class MessageForm extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { message: '' };
+    this.state = { message: '...' };
   }
 
   handleChange = (e) => {
@@ -17,12 +17,12 @@ class MessageForm extends PureComponent {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.createMessage(this.props.selectedChannel, this.props.currentUser, this.state.message);
-    this.setState({ message: '' });
+    this.setState({ message: '...' });
   }
   render() {
     return (
       <form className="message-form" onSubmit={this.handleSubmit}>
-        <input type="text" onChange={this.handleChange} value={this.state.message} />
+        <input type="text" onChange={this.handleChange} />
         <button type="submit">SEND</button>
       </form>
     );

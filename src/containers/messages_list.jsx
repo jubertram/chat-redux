@@ -29,7 +29,7 @@ class MessagesList extends PureComponent {
     const { messagesList } = this.props;
     return (
       <div className="messages-list" ref={(list) => { this.list = list; }}>
-        { messagesList.map(message => <Message message={message} key={message.created_at}/>) }
+        { messagesList.map(message => <Message message={message} key={message.content} />) }
       </div>
     );
   }
