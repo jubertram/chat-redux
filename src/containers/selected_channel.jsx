@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import MessagesList from './messages_list';
 import MessageForm from './message_form';
-import { connect } from 'react-redux';
 
 class SelectedChannel extends PureComponent {
   render() {

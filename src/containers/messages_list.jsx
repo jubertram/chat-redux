@@ -5,12 +5,18 @@ import { fetchMessages } from '../actions/index';
 import Message from '../components/message';
 
 class MessagesList extends PureComponent {
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedChannel !== this.props.selectedChannel) {
+      this.props.fetchMessages(nextProps.selectedChannel);
+    }
+  }
+
   componentWillMount() {
     this.fetchMessages();
   }
 
   componentDidMount() {
-    this.refresher = setInterval(this.fetchMessages, 5000);
+    this.refresher = setInterval(this.fetchMessages, 1000);
   }
 
   componentDidUpdate() {
